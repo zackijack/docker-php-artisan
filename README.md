@@ -1,24 +1,12 @@
-# Quick reference
+# Docker PHP Artisan
 
--   **Source of this image**:  
-    [https://github.com/zackyjack/docker-php-artisan](https://github.com/zackyjack/docker-php-artisan)
-
--   **Where to file issues**:  
-    [https://github.com/zackyjack/docker-php-artisan/issues](https://github.com/zackyjack/docker-php-artisan/issues)
-
--   **Maintained by**:  
-    [Muhammad Zackky](https://github.com/zackyjack/docker-php-artisan)
-
--   **Supported Docker versions**:  
-    [the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+A minimal Docker image for Laravel Artisan CLI based on official PHP image
 
 # What is Artisan?
 
 Artisan is the command-line interface included with Laravel. It provides a number of helpful commands that can assist you while you build your application.
 
 You can read more about Artisan in [Laravel official documentation](https://laravel.com/docs/5.4/artisan).
-
-
 
 # Using
 
