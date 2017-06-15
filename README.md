@@ -35,11 +35,11 @@ docker run --rm --interactive --tty \
     zackyjack/php-artisan serve --host 0.0.0.0
 ```
 
-And don't change default `serve` port, if you need to change port,  just specify it in `--publish` flag. E.g. to change port to 212:
+And don't change default `serve` port, if you need to change port,  just specify it in `--publish` flag. E.g. to change port to 8080:
 
 ```sh
 docker run --rm --interactive --tty \
-    --publish 212:8000
+    --publish 8080:8000
     --volume $PWD:/app \
     zackyjack/php-artisan serve --host 0.0.0.0
 ```
