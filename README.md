@@ -8,7 +8,7 @@ Artisan is the command-line interface included with Laravel. It provides a numbe
 
 You can read more about Artisan in [Laravel official documentation](https://laravel.com/docs/5.4/artisan).
 
-# Using
+# Usage
 
 To view a list of all available Artisan commands, run the `zackyjack/php-artisan` image with `list` command:
 
