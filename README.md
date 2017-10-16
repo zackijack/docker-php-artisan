@@ -10,18 +10,10 @@ You can read more about Artisan in [Laravel official documentation](https://lara
 
 # Usage
 
-To view a list of all available Artisan commands, run the `zackyjack/php-artisan` image with `list` command:
+To view a list of all available Artisan commands, just run the `zackyjack/php-artisan` image without any additional command:
 
 ```sh
-docker run --rm --interactive --tty \
-    --volume $PWD:/app \
-    zackyjack/php-artisan list
-```
-
-Or just:
-
-```sh
-docker run --rm --interactive --tty \
+docker container run --rm --interactive --tty \
     --volume $PWD:/app \
     zackyjack/php-artisan
 ```
@@ -29,8 +21,8 @@ docker run --rm --interactive --tty \
 To serve application with `serve` command, you need to specify host to `0.0.0.0`, so you can open it in your host browser:
 
 ```sh
-docker run --rm --interactive --tty \
-    --publish 80:8000
+docker container run --rm --interactive --tty \
+    --publish 80:8000 \
     --volume $PWD:/app \
     zackyjack/php-artisan serve --host 0.0.0.0
 ```
@@ -38,8 +30,8 @@ docker run --rm --interactive --tty \
 And don't change default `serve` port, if you need to change port,  just specify it in `--publish` flag. E.g. to change port to 8080:
 
 ```sh
-docker run --rm --interactive --tty \
-    --publish 8080:8000
+docker container run --rm --interactive --tty \
+    --publish 8080:8000 \
     --volume $PWD:/app \
     zackyjack/php-artisan serve --host 0.0.0.0
 ```
@@ -47,7 +39,7 @@ docker run --rm --interactive --tty \
 By default, Artisan runs as root inside the container. This can lead to permission issues on your host filesystem. You can run Artisan as your local user:
 
 ```sh
-docker run --rm --interactive --tty \
+docker container run --rm --interactive --tty \
     --volume $PWD:/app \
     --user $(id -u):$(id -g) \
     zackyjack/php-artisan make:migration create_tasks_table
