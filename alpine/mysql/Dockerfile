@@ -2,7 +2,7 @@ FROM php:7-alpine
 
 MAINTAINER Muhammad Zackky <m.zackky@gmail.com>
 
-RUN apk --no-cache add libmcrypt-dev libxml2-dev openssl
+RUN apk update; apk update; apk --no-cache add libmcrypt-dev libxml2-dev openssl
 
 RUN docker-php-ext-install \
         mbstring \
@@ -11,7 +11,8 @@ RUN docker-php-ext-install \
         pdo_mysql \
         tokenizer \
         xml \
-        zip  
+        zip \
+        ldap
 
 WORKDIR /app
 
